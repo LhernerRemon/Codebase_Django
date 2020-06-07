@@ -5,7 +5,7 @@ Pillow==7.1.2
 psycopg2==2.8.5 --no-binary psycopg2
 
 # Django
-django==2.2.12
+django==2.2.13
 
 # Environment
 django-environ==0.4.5
