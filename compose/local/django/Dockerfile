@@ -1,6 +1,5 @@
-# Imagen base
 FROM python:3.8-alpine
-# establecer variables de entorno predeterminadas
+
 ENV PYTHONUNBUFFERED 1
 
 RUN apk update \

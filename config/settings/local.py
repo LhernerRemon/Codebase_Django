@@ -1,5 +1,5 @@
 """Development settings."""
-
+from __future__ import absolute_import
 from .base import *  # NOQA
 from .base import env
 
@@ -18,6 +18,13 @@ CACHES = {
     }
 }
 
+INTERNAL_IPS = ["127.0.0.1", "10.0.2.2"]
+if env("USE_DOCKER") == "yes":
+    import socket
+
+    hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
+    INTERNAL_IPS += [".".join(ip.split(".")[:-1] + ["1"]) for ip in ips]
+    
 
 # django-extensions
 INSTALLED_APPS += ['django_extensions']  # noqa F405
@@ -28,6 +35,8 @@ TEMPLATES[0]['OPTIONS']['debug'] = DEBUG  # NOQA
 
 # Email
 EMAIL_BACKEND = env('DJANGO_EMAIL_BACKEND', default='django.core.mail.backends.console.EmailBackend')
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 1025
 
 
 # Celery
