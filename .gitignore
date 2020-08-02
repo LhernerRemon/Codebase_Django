@@ -283,6 +283,5 @@ pyvenv.cfg
 pip-selfcheck.json
 .env
 .ipython/
-.env
-.envs/*
+#.envs/*
 !.envs/.local/

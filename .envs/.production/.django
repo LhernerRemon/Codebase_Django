@@ -1,0 +1,35 @@
+# General
+# DJANGO_READ_DOT_ENV_FILE=True
+DJANGO_SETTINGS_MODULE=config.settings.production
+DJANGO_SECRET_KEY=14qEE5goOluml8uaLI8UZ4bEIRAQpFCclpoZZKs889QdMYIpu01DGD9c8K3L7I1q
+DJANGO_ADMIN_URL=qGkvSKClVZt9tDVSKeWJ4b61twgAUmz9/
+DJANGO_ALLOWED_HOSTS=.sima.com
+
+# Security
+# TIP: better off using DNS, however, redirect is OK too
+DJANGO_SECURE_SSL_REDIRECT=False
+
+# Email
+DJANGO_SERVER_EMAIL=
+
+
+# AWS
+DJANGO_AWS_ACCESS_KEY_ID=
+DJANGO_AWS_SECRET_ACCESS_KEY=
+DJANGO_AWS_STORAGE_BUCKET_NAME=
+
+
+# Gunicorn
+WEB_CONCURRENCY=4
+
+
+# Redis
+REDIS_URL=redis://redis:6379/0
+
+# Celery
+# ------------------------------------------------------------------------------
+
+# Flower
+CELERY_FLOWER_USER=oxoMwcSuyYVVdhjPagHrjUQRClvdpXGu
+CELERY_FLOWER_PASSWORD=kwxucG4nXURIcMPPsTDU9uz0Bawqxd7f4cq0laB7QZs5K3ZppyI4G46Wi50MLiKj
+
